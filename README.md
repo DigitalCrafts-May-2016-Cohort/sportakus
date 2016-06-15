@@ -34,7 +34,7 @@ Dave, Sandyha, Matthew
 #Mockup Design
 
 
-![screenshot](screenshot.png)
+![screenshot](images/screenshot.png)
 
 
 3 contributions your team would like for others to add to the project
