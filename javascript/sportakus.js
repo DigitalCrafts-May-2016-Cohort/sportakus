@@ -36,7 +36,7 @@ app.factory('googleMap', function(ticketCall) {
         title: 'NFL',
         animation: google.maps.Animation. DROP,
         icon: {
-          url: '/nfl logo.png',
+          url: 'images/nfl logo.png',
           size: new google.maps.Size(50, 50),
           origin: new google.maps.Point(0, 0),
           anchor: new google.maps.Point(25, 25)
@@ -65,7 +65,7 @@ app.factory('nflCall', function($http) {
     getNflSchedule: function(callback) {
       $http({
         method: 'GET',
-        url: '/nflschedule.JSON'
+        url: 'JSON/nflschedule.JSON'
 
       }).success(function(nflScheduleData) {
           console.log(nflScheduleData);
@@ -80,7 +80,7 @@ app.factory('nflStadiumCall', function($http) {
     getNflStadium: function(callback) {
       $http({
         method: 'GET',
-        url: '/nflStadiumData.JSON'
+        url: 'JSON/nflStadiumData.JSON'
 
       }).success(function(nflStadiumData) {
           console.log(nflStadiumData);
