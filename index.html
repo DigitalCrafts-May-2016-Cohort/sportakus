@@ -1,137 +1,82 @@
 <!-- API AIzaSyCnducMRhTBB1pVdg4g5MtvO2N3TFZhm2k -->
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Sportakus</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="javascript/angular.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnducMRhTBB1pVdg4g5MtvO2N3TFZhm2k"></script>
+<html ng-app="sports-app" >
+  <head>
+    <meta charset="utf-8">
+    <title>Sportakus</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnducMRhTBB1pVdg4g5MtvO2N3TFZhm2k"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="sportakus.js"></script>
+    <link href="frontend.css" rel="stylesheet">
+  </head>
+  <style media="screen">
 
-
-  <script src="javascript/frontend.js"></script>
-  <link href="frontend.css" rel="stylesheet">
-</head>
-<style media="screen">
-
-</style>
-<body>
-  <h1>Sportakus</h1><br>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav listitem">
-          <li><a href="#">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Soccer <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">North America</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">South America</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Europe</a></li>
-            </ul>
-          </li>
-          <li class="active"><a href="#">NASCAR <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">NFL</a></li>
-          <li><a href="#">MLB</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+  </style>
+  <body>
+    <h1>Sportakus</h1><br>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav listitem">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Soccer <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">North America</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">South America</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Europe</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="#">NASCAR <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">NFL</a></li>
+            <li><a href="#">MLB</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div ng-controller="NflController">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div id="map" >
+            </div>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div id="map"></div>
-
-</div>
-
-
-
-
-<!-- ~~~TicketMaster Sidebar~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-      <div id='events-panel' class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Events</h3>
-        </div>
-        <div class="panel-body">
-          <div id="events" class="list-group">
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">Event title</h4>
-              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p class="venue"></p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">Event title</h4>
-              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p class="venue"></p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">Event title</h4>
-              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p class="venue"></p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">Event title</h4>
-              <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p class="venue"></p>
-            </a>
+          <div class="col-md-4">
+            <div id = "ticketBox" >
+              <div ng-repeat = "ticketResult in ticketResults">
+                {{ticketResult.name}}<br>
+                Venue: {{ticketResult._embedded.venues[0].name}}
+                <a ng-href= "{{ticketResult.url}}"><input type="button" name="name" value="Buy tickets"></a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="panel-footer">
-          <nav>
-            <ul class="pager">
-              <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
-              <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-          </nav>
-        </div>
       </div>
-
-      <div id='attraction-panel' class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Attraction</h3>
-        </div>
-        <div id="attraction" class="panel-body">
-          <h4 class="list-group-item-heading">Attraction title</h4>
-          <img class="col-xs-12" src="">
-          <p id="classification"></p>
-        </div>
-      </div>
+        <!-- Ticketbox sidebar -->
       </div>
     </div>
-  </div>
 
+  <script>
 
-<!-- ~~~////ENDING ENDING ENDING TicketMaster Sidebar ~~~~~~~~~~ -->
-
-
-
-
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="javascript/ticketMaster.js"></script>
-<script src="javascript/sportakus.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer> </script>
-
-</body>
+  </script>
+  </body>
 </html>

@@ -1,7 +1,66 @@
-var app = angular.module('sports-app', ['ngRoute']);
+var app = angular.module('sports-app', []);
+var markerDictionary = {};
 
-// NFL AJAX service and controller
-app.factory('nflCall', function($http, $routeProvider) {
+app.factory('googleMap', function(ticketCall) {
+  var homeTeam = "";
+  var sidebarData;
+  var mapElement = document.getElementById('map');
+  var map = new google.maps.Map(mapElement, {
+    center: {lat: 39.99727, lng: -94.578567},
+    zoom: 4
+  });
+  var infoWindow = new google.maps.InfoWindow();
+  function openInfoWindow(nflStadiumResult) {
+    var venueName = '';
+    var venueId = nflStadiumResult.id;
+    var gameObjectArray = gamesByVenueDictionary[venueId];
+    var gamesData = gameObjectArray.map(function(games){
+      var awayTeam = games.away.name;
+      homeTeam = games.home.name;
+      venueName = games.venue.name;
+      var contentString ='<h6>' + awayTeam + ' vs ' + homeTeam + '</h6>';
+      return contentString;
+    });
+    var headerString = '<h4>' + venueName + '</h3>';
+    var newGamesData = gamesData.join('');
+    var marker = markerDictionary[nflStadiumResult.id];
+    infoWindow.setContent(headerString + newGamesData);
+    infoWindow.open(map, marker);
+  }
+  function makeMarkers(gamesByVenueDictionary, nflStadiumResults, sidebarDataCallback) {
+    var nflStadiumData = nflStadiumResults.map(function(nflStadiumResult) {
+      var thePosition = {lat: nflStadiumResult.lat, lng: nflStadiumResult.lng};
+      var marker = new google.maps.Marker({
+        position: thePosition,
+        map: map,
+        title: 'NFL',
+        animation: google.maps.Animation. DROP,
+        icon: {
+          url: '/nfl logo.png',
+          size: new google.maps.Size(50, 50),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(25, 25)
+        }
+      });
+      markerDictionary[nflStadiumResult.id] = marker;
+      marker.addListener('click', function(){
+        openInfoWindow(nflStadiumResult);
+        ticketCall.getTicketInfo(homeTeam, function(ticketData){
+          sidebarDataCallback(ticketData);
+
+        });
+          return marker;
+      });
+    });
+  }
+  return {
+    openInfoWindow: openInfoWindow,
+    makeMarkers: makeMarkers,
+    sidebarData: sidebarData
+  };
+});
+// NFL AJAX service
+app.factory('nflCall', function($http) {
   return {
     getNflSchedule: function(callback) {
       $http({
@@ -9,85 +68,88 @@ app.factory('nflCall', function($http, $routeProvider) {
         url: '/nflschedule.JSON'
 
       }).success(function(nflScheduleData) {
-          console.log( nflScheduleData);
+          console.log(nflScheduleData);
           callback(nflScheduleData);
         });
     }
   };
 });
+// NFL Stadium AJAX service
+app.factory('nflStadiumCall', function($http) {
+  return {
+    getNflStadium: function(callback) {
+      $http({
+        method: 'GET',
+        url: '/nflStadiumData.JSON'
 
-app.controller('NflController', function($http, $scope, nflCall) {
+      }).success(function(nflStadiumData) {
+          console.log(nflStadiumData);
+          callback(nflStadiumData);
+        });
+    }
+  };
+});
+// NFL controller
+app.controller('NflController', function($http, $scope, nflCall, nflStadiumCall, googleMap) {
+
   nflCall.getNflSchedule(function(nflScheduleData) {
-    var nflScheduleResults = nflScheduleData;
+    var nflScheduleResults = nflScheduleData.weeks;
     $scope.results = nflScheduleResults;
+    nflStadiumCall.getNflStadium(function(nflStadiumData){
+      var nflStadiumResults = nflStadiumData.nflStadium;
+      googleMap.makeMarkers(nflScheduleResults, nflStadiumResults, function(ticketData){
+        $scope.ticketResults = ticketData._embedded.events;
+        // $scope.$apply();
+      });
+      createGameDictionary(nflScheduleResults);
+    });
+
+
+
   });
 });
 
-// MLB AJAX service and controller
-app.factory('mlbCall', function($http) {
+var gamesByVenueDictionary = {};
+function createGameDictionary (nflScheduleResults){
+  for (var i = 0; i < nflScheduleResults.length; i++) {
+    var data = nflScheduleResults[i];
+    for (var j = 0; j < data.games.length; j++) {
+      var venueId = data.games[j].venue.id;
+      if (!(venueId in gamesByVenueDictionary)) {
+        gamesByVenueDictionary[venueId] = [];
+      }
+
+      var gamesArray = gamesByVenueDictionary[venueId];
+      gamesArray.push(data.games[j]);
+    }
+  }
+}
+// Ticketmaster controller and factory
+// var sport = "nfl";
+// var teamName = "Falcons";
+
+app.factory('ticketCall', function($http) {
   return {
-    getMlbSchedule: function(callback) {
+    getTicketInfo: function(homeTeam, callback) {
       $http({
         method: 'GET',
-        url: '/mlbschedule.JSON'
-
-      }).success(function(mlbScheduleData) {
-          console.log( mlbScheduleData);
-          callback(mlbScheduleData);
-        });
+        url:'https://app.ticketmaster.com/discovery/v2/events.json?',
+        params: {
+          apikey: 'E8VNq1LttN0VP5ql6bYc28kSUXfNpFjG',
+          keyword: homeTeam,
+          classificationName: "NFL"
+        }
+      }).success(function(ticketData) {
+          console.log(ticketData);
+          callback(ticketData);
+      });
     }
   };
 });
 
-app.controller('MlbController', function($http, $scope, mlbCall) {
-  nflCall.getNflSchedule(function(mlbScheduleData) {
-    var mlbScheduleResults = mlbScheduleData;
-    $scope.results = mlbScheduleResults;
-  });
-});
-
-// Nascar Sprint Cup Series AJAX service and controller
-app.factory('nascarCall', function($http) {
-  return {
-    getNascarSchedule: function(callback) {
-      $http({
-        method: 'GET',
-        url: '/nascar-sc-schedule.JSON'
-
-      }).success(function(nascarScheduleData) {
-          console.log( nascarScheduleData);
-          callback(nascarScheduleData);
-        });
-    }
-  };
-});
-
-app.controller('NascarController', function($http, $scope, nascarCall) {
-  nascarCall.getNascarSchedule(function(nascarScheduleData) {
-    var nascarScheduleResults = nascarScheduleData;
-    $scope.results = nascarScheduleResults;
-  });
-});
-
-// USA Soccer AJAX service and controller
-app.factory('usSoccerCall', function($http) {
-  return {
-    getUsSoccerSchedule: function(callback) {
-      $http({
-        method: 'GET',
-        url: '/ussoccerschedule.JSON'
-
-      }).success(function(usSoccerScheduleData) {
-          console.log(usSoccerScheduleData);
-          callback(usSoccerScheduleData);
-        });
-    }
-  };
-});
-
-app.controller('UsSoccerController', function($http, $scope, usSoccerCall) {
-  usSoccerCall.getUsSoccerSchedule(function(usSoccerScheduleData) {
-    var usSoccerScheduleResults = usSoccerScheduleData;
-    $scope.results = usSoccerScheduleResults;
-  });
-});
+// app.controller('TicketController', function($http, $scope, ticketCall){
+//   ticketCall.getTicketInfo(function(ticketData){
+//     var ticketResults = ticketData._embedded.events;
+//     $scope.ticketResults = ticketResults;
+//   });
+// });
