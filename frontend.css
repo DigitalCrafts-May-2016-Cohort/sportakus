@@ -1,5 +1,5 @@
 body{
-  background-image: url(images/sports-large.jpg);
+  background-image: url(sports-large.jpg);
 }
 html, body {
   height: 100%;
@@ -7,18 +7,22 @@ html, body {
   padding: 0;
 }
 #map{
-  height: 600px;
-  width: 900px;
+  height: 900px;
+  width: 1400px;
   display: block;
-  margin: 50px;
+  /*margin: 50px;*/
+  float: left;
+  box-sizing: border-box;
 }
 .listitem li{
   font-size: 20px;
 }
 #ticketBox {
+margin-top: 50px;
+float: left;
+width: 30%;
+left: 70%;
  height: 100%;
- width: 20%;
- left: 80%;
  position: absolute;
  padding: 2%;
  padding-top: 40px;
