@@ -1,0 +1,98 @@
+{
+	"mlsStadiums": [{
+		"stadium": "Avaya Stadium",
+		"id": "a4cee3dc-f2e3-475e-9d44-139e13a6d2eb",
+		"lat": 37.3510,
+		"lng": -37.3510
+	}, {
+		"stadium": "BBVA Compass Stadium",
+		"id": "4e74d253-2d54-4824-baf8-30b4c4bdf39e",
+		"lat": 29.7522,
+		"lng": -95.3524
+	}, {
+		"stadium": "BC Place",
+		"id": "2c0d4057-2a1a-4102-b058-4d68b9ecacec",
+		"lat": 49.2768,
+		"lng": -49.2768
+	}, {
+		"stadium": "BMO Field",
+		"id": "82b21ae9-5432-449a-bd61-481a91b5f840",
+		"lat": 43.6332,
+		"lng": -43.6332
+	}, {
+		"stadium": "Camping World Stadium",
+		"id": "9c33b523-0eaa-4347-833f-c0b300f2e172",
+		"lat": 28.5390,
+		"lng": -81.4027
+	}, {
+		"stadium": "CenturyLink Field",
+		"id": "d29d52d6-a0eb-41a4-afc6-bcac74835e79",
+		"lat": 47.5952,
+		"lng": -122.3316
+	}, {
+		"stadium": "Children's Mercy Park",
+		"id": "d2173e0b-4dbd-4a65-b930-bcca120d282c",
+		"lat": 39.1215,
+		"lng": -94.8233
+	}, {
+		"stadium": "Dicks Sporting Goods Park",
+		"id": "359f851b-43e1-4e44-838b-dede120fb674",
+		"lat": 39.8057,
+		"lng": -104.8918
+	}, {
+		"stadium": "Gillette Stadium",
+		"id": "81e2e5eb-0b4e-4ff3-aa35-fbabc9d4c38e",
+		"lat": 42.0909,
+		"lng": -71.2643
+	}, {
+		"stadium": "Mapfre Stadium",
+		"id": "cba2bb6d-da38-4c80-9f28-8d9538791b9b",
+		"lat": 40.0095,
+		"lng": -82.9912
+	}, {
+		"stadium": "Providence Park",
+		"id": "bb228539-599c-42c7-9a7f-e656284b33dc",
+		"lat": 45.5216,
+		"lng": -122.6917
+	}, {
+		"stadium": "RFK Stadium",
+		"id": "ff692ddd-c6fa-4850-a593-1078b330fedb",
+		"lat": 38.8898,
+		"lng": -76.9720
+	}, {
+		"stadium": "Red Bull Arena",
+		"id": "53f95d31-bcac-4e49-b6e8-10f50954340d",
+		"lat": 40.7368,
+		"lng": -74.1504
+	}, {
+		"stadium": "Saputo Stadium",
+		"id": "db79eaa0-b426-45a1-aed6-400ab6d6e86b",
+		"lat": 45.563075,
+		"lng": -73.552656
+	}, {
+		"stadium": "StubHub Center",
+		"id": "cd4298d7-d420-45c3-9167-42432fc7d72d",
+		"lat": 33.8643,
+		"lng": -118.2611
+	}, {
+		"stadium": "Talen Energy Stadium",
+		"id": "bcd71bfd-4d7f-44a9-8b4c-c4585a045972",
+		"lat": 39.8328,
+		"lng": -75.3784
+	}, {
+		"stadium": "Toyota Park",
+		"id": "eeab196b-2cf1-4e71-ac01-5f3acf5aba50",
+		"lat": 41.7646,
+		"lng": -87.8050
+	}, {
+		"stadium": "Toyota Stadium",
+		"id": "be2c2421-9b4d-487d-af6b-069d631d021f",
+		"lat": 33.1543,
+		"lng": -96.8352
+	}, {
+		"stadium": "Yankee Stadium", 
+		"id": "95667d25-455a-4187-9e33-67fed6d58ef7",
+		"lat": 40.8296,
+		"lng": -73.9262
+	}]
+}
