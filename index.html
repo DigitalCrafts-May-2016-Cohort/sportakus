@@ -6,11 +6,11 @@
     <title>Sportakus</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="javascript/angular.js"></script>
+    <script src="angular.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnducMRhTBB1pVdg4g5MtvO2N3TFZhm2k"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="javascript/sportakus.js"></script>
-    <link href="styles.css" rel="stylesheet">
+    <script src="sportakus.js"></script>
+    <link href="frontend.css" rel="stylesheet">
   </head>
   <style media="screen">
 
@@ -55,28 +55,22 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div ng-controller="NflController">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div id="map" >
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div id = "ticketBox" >
-              <div ng-repeat = "ticketResult in ticketResults">
-                {{ticketResult.name}}<br>
-                Venue: {{ticketResult._embedded.venues[0].name}}
-                <a ng-href= "{{ticketResult.url}}"><input type="button" name="name" value="Buy tickets"></a>
-              </div>
-            </div>
-          </div>
+      <div id="map" >
       </div>
-        <!-- Ticketbox sidebar -->
+      <div id = "ticketBox" ng-show="ticketResults.length>0">
+        <div ng-repeat = "ticketResult in ticketResults">
+          {{ticketResult.name}}<br>
+          Venue: {{ticketResult._embedded.venues[0].name}}
+          <a ng-href= "{{ticketResult.url}}"><input type="button" name="name" value="Buy tickets"></a>
+        </div>
       </div>
     </div>
-
+        <!-- Ticketbox sidebar -->
   <script>
 
   </script>
+  </body>
+</html>
+
   </body>
 </html>
