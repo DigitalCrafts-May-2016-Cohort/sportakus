@@ -1,6 +1,6 @@
 var app = angular.module('sports-app', []);
 var markerDictionary = {};
-
+var cityName;
 app.factory('googleMap', function(ticketCall) {
   var homeTeam = "";
   var sidebarData;
@@ -18,6 +18,7 @@ app.factory('googleMap', function(ticketCall) {
       var awayTeam = games.away.name;
       homeTeam = games.home.name;
       venueName = games.venue.name;
+      cityName = games.venue.city;
       var contentString ='<h6>' + awayTeam + ' vs ' + homeTeam + '</h6>';
       return contentString;
     });
@@ -37,9 +38,9 @@ app.factory('googleMap', function(ticketCall) {
         animation: google.maps.Animation. DROP,
         icon: {
           url: 'images/nfl logo.png',
-          size: new google.maps.Size(50, 50),
+          size: new google.maps.Size(25, 33),
           origin: new google.maps.Point(0, 0),
-          anchor: new google.maps.Point(25, 25)
+          anchor: new google.maps.Point(25, 10)
         }
       });
       markerDictionary[nflStadiumResult.id] = marker;
@@ -137,7 +138,8 @@ app.factory('ticketCall', function($http) {
         params: {
           apikey: 'E8VNq1LttN0VP5ql6bYc28kSUXfNpFjG',
           keyword: homeTeam,
-          classificationName: "NFL"
+          classificationName: "NFL",
+          city: cityName
         }
       }).success(function(ticketData) {
           console.log(ticketData);
