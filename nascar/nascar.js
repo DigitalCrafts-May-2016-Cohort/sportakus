@@ -2,6 +2,7 @@ var app = angular.module('nascar-app', []);
 var markerDictionary = {};
 var cityName = "";
 var seriesDate;
+var venueName;
 app.factory('googleMap', function(ticketCall) {
   var seriesName = "";
   var sidebarData;
@@ -139,8 +140,9 @@ app.factory('ticketCall', function($http) {
         url:'https://app.ticketmaster.com/discovery/v2/events.json?',
         params: {
           apikey: 'E8VNq1LttN0VP5ql6bYc28kSUXfNpFjG',
-          keyword: "NASCAR",
-          date: seriesDate
+          Keyword: "nascar",
+          keyword: venueName
+
         }
       }).success(function(ticketData) {
           console.log(ticketData);

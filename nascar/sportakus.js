@@ -1,6 +1,6 @@
 var app = angular.module('sports-app', []);
 var markerDictionary = {};
-
+var cityName;
 app.factory('googleMap', function(ticketCall) {
   var homeTeam = "";
   var sidebarData;
@@ -18,6 +18,7 @@ app.factory('googleMap', function(ticketCall) {
       var awayTeam = games.away.name;
       homeTeam = games.home.name;
       venueName = games.venue.name;
+      cityName = games.venue.city;
       var contentString ='<h6>' + awayTeam + ' vs ' + homeTeam + '</h6>';
       return contentString;
     });
@@ -137,7 +138,8 @@ app.factory('ticketCall', function($http) {
         params: {
           apikey: 'E8VNq1LttN0VP5ql6bYc28kSUXfNpFjG',
           keyword: homeTeam,
-          classificationName: "NFL"
+          classificationName: "NFL",
+          city: cityName
         }
       }).success(function(ticketData) {
           console.log(ticketData);
