@@ -3,7 +3,7 @@ A front-end project for DigitalCrafts utilizing everything we've learned so far.
 
 * Working together as a team, practice effective communications via explicit documentation through Github
 * Scrum agile methodology implemented via daily scrum meetings and scrum board to track our progress
-
+![screenshot](images/scrumboard.jpg)
 
 # Overview of Project
 Our project will be a sort of sports aggragator that pulls: 
@@ -29,8 +29,8 @@ HTML5, CSS3, JavaScript,
 * XML to JSON converter: http://www.utilities-online.info/xmltojson/#.V17zT-YrJhE
 
 
-# Contributors
-Dave, Sandyha, Matthew
+# Team Sportan
+Dave, Sandyha,and Matthew
 
 # Name of each team member and his/her individual contributions to the project
 * Matthew: worked on core functionalities of the app (building local JSON files to store data), helped the team with problem-sovling javascript issues.
