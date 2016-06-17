@@ -6,7 +6,7 @@ app.factory('googleMap', function(ticketCall) {
   var sidebarData;
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, {
-    center: {lat: 39.99727, lng: -94.578567},
+    center: {lat: 33.7577, lng: -84.4008},
     zoom: 4
   });
   var infoWindow = new google.maps.InfoWindow();
@@ -92,7 +92,6 @@ app.factory('nflStadiumCall', function($http) {
 });
 // NFL controller
 app.controller('NflController', function($http, $scope, nflCall, nflStadiumCall, googleMap) {
-
   nflCall.getNflSchedule(function(nflScheduleData) {
     var nflScheduleResults = nflScheduleData.weeks;
     $scope.results = nflScheduleResults;
@@ -100,7 +99,6 @@ app.controller('NflController', function($http, $scope, nflCall, nflStadiumCall,
       var nflStadiumResults = nflStadiumData.nflStadium;
       googleMap.makeMarkers(nflScheduleResults, nflStadiumResults, function(ticketData){
         $scope.ticketResults = ticketData._embedded.events;
-        // $scope.$apply();
       });
       createGameDictionary(nflScheduleResults);
     });
@@ -110,6 +108,7 @@ app.controller('NflController', function($http, $scope, nflCall, nflStadiumCall,
   });
 });
 
+// This function reorganizes the nfl schedule from weeks to venue.
 var gamesByVenueDictionary = {};
 function createGameDictionary (nflScheduleResults){
   for (var i = 0; i < nflScheduleResults.length; i++) {
@@ -125,10 +124,8 @@ function createGameDictionary (nflScheduleResults){
     }
   }
 }
-// Ticketmaster controller and factory
-// var sport = "nfl";
-// var teamName = "Falcons";
 
+// Ticketmaster API call
 app.factory('ticketCall', function($http) {
   return {
     getTicketInfo: function(homeTeam, callback) {
@@ -148,10 +145,3 @@ app.factory('ticketCall', function($http) {
     }
   };
 });
-
-// app.controller('TicketController', function($http, $scope, ticketCall){
-//   ticketCall.getTicketInfo(function(ticketData){
-//     var ticketResults = ticketData._embedded.events;
-//     $scope.ticketResults = ticketResults;
-//   });
-// });
