@@ -42,6 +42,10 @@ Dave, Sandyha, Matthew
 
 ![screenshot](images/screenshot.png)
 
+#Phases of our Project
+
+![screenshot](images/screenshot2.png)
+![screenshot](images/screenshot3.png)
 
 3 contributions your team would like for others to add to the project
 * Dynamic data pulls from assorted API's (this can be accomplished on paid accounts for API services)
