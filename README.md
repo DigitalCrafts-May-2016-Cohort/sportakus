@@ -2,7 +2,7 @@
 A front-end project for DigitalCrafts utilizing everything we've learned so far. We had one week to finish our Sports Matches and Tickets application. Our learning objectives include:
 
 * Working together as a team, practice effective communications via explicit documentation through Github
-* Project management methodologies and practices: daily scrum meetings and scrum board
+* Scrum agile methodology implemented via daily scrum meetings and scrum board to track our progress
 
 
 # Overview of Project
@@ -43,7 +43,6 @@ Dave, Sandyha, Matthew
 ![screenshot](images/screenshot.png)
 
 #Phases of our Project
-
 
 ![screenshot](images/screenshot2.png)
 
