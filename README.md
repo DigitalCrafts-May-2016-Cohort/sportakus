@@ -1,5 +1,6 @@
 # Sportakus
 A front-end project for DigitalCrafts utilizing everything we've learned so far. We had one week to finish our Sports Matches and Tickets application. Our learning objectives include:
+
 * Working together as a team, practice effective communications via explicit documentation through Github
 * Project management methodologies and practices: daily scrum meetings and scrum board
 
@@ -15,14 +16,16 @@ Our project will be a sort of sports aggragator that pulls:
 
 
 # Technologies, Frameworks, and Programming Languages used
-* Bootstrap
+Frameworks
+Bootstrap, Angularjs
 
-* (stats) Sports Radar API
+API's
+Sports Radar API, Ticketmaster API, Google Maps API
 
-* (tickets) Ticketmaster/StubHub API
+Languages:
+HTML5, CSS3, JavaScript, 
 
-* (map) Google Maps API
-
+Additional Tools:
 * XML to JSON converter: http://www.utilities-online.info/xmltojson/#.V17zT-YrJhE
 
 
