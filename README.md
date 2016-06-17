@@ -16,16 +16,16 @@ Our project will be a sort of sports aggragator that pulls:
 
 
 # Technologies, Frameworks, and Programming Languages used
-Frameworks
+##### Frameworks
 Bootstrap, Angularjs
 
-API's
+##### API's
 Sports Radar API, Ticketmaster API, Google Maps API
 
-Languages:
+##### Languages:
 HTML5, CSS3, JavaScript, 
 
-Additional Tools:
+##### Additional Tools:
 * XML to JSON converter: http://www.utilities-online.info/xmltojson/#.V17zT-YrJhE
 
 
@@ -47,6 +47,7 @@ Dave, Sandyha, Matthew
 * Dynamic data pulls from assorted API's (this can be accomplished on paid accounts for API services)
 * Add more sports to app
 * Add login functionality to remember user ticket/sports preferences
+* Add news feed carousel at the bottom, can be accomplished using Bing API
 
 
 
