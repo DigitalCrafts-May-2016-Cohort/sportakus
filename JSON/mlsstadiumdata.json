@@ -3,7 +3,7 @@
 		"stadium": "Avaya Stadium",
 		"id": "a4cee3dc-f2e3-475e-9d44-139e13a6d2eb",
 		"lat": 37.3510,
-		"lng": -37.3510
+		"lng": -121.9247
 	}, {
 		"stadium": "BBVA Compass Stadium",
 		"id": "4e74d253-2d54-4824-baf8-30b4c4bdf39e",
@@ -13,12 +13,12 @@
 		"stadium": "BC Place",
 		"id": "2c0d4057-2a1a-4102-b058-4d68b9ecacec",
 		"lat": 49.2768,
-		"lng": -49.2768
+		"lng": -123.1120
 	}, {
 		"stadium": "BMO Field",
 		"id": "82b21ae9-5432-449a-bd61-481a91b5f840",
 		"lat": 43.6332,
-		"lng": -43.6332
+		"lng": -79.4186
 	}, {
 		"stadium": "Camping World Stadium",
 		"id": "9c33b523-0eaa-4347-833f-c0b300f2e172",
@@ -90,7 +90,7 @@
 		"lat": 33.1543,
 		"lng": -96.8352
 	}, {
-		"stadium": "Yankee Stadium", 
+		"stadium": "Yankee Stadium",
 		"id": "95667d25-455a-4187-9e33-67fed6d58ef7",
 		"lat": 40.8296,
 		"lng": -73.9262
