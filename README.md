@@ -44,7 +44,9 @@ Dave, Sandyha, Matthew
 
 #Phases of our Project
 
+
 ![screenshot](images/screenshot2.png)
+
 ![screenshot](images/screenshot3.png)
 
 3 contributions your team would like for others to add to the project
