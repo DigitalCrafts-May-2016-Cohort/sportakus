@@ -1,5 +1,6 @@
 body{
   background-image: url(images/sports-large.jpg);
+  background-repeat: no-repeat;
 }
 h1{
   font-size: 70px;
@@ -17,13 +18,31 @@ ul li a{
   color: brown;
   font-size: 20px;
 }
+/*input{
+ margin-top: 15px;
+ width: 400px;
+ height: 45px;
+ border-radius: 5px;
+}*/
+#search-button{
+ height: 45px;
+ margin-top: 15px;
+ width: 80px;
+ border-radius: 5px;
+}
+.right{
+ float: right;
+ margin-right: 20px;
+}
 li{
-  background-color: lightblue;
-  border-radius: 5%;
-  height: 50px;
-  margin-bottom: 2px;
+ margin: 5px;
+ height: 50px;
+ width: 180px;
+ border-radius: 5px;
+ font-family: fantasy;
 }
 #map{
+  margin-top: 5px;
   height: 1100px;
   width: 1950px;
   display: block;
@@ -35,13 +54,14 @@ li{
   font-size: 20px;
 }
 #ticketBox {
-  background-image: url(images/blue.jpg);
-  color:white;
+  /*background-image: url(images/nflback2.jpg);*/
+  background-repeat: no-repeat;
+  color:maroon;
   margin-top: 50px;
   float: left;
   width: 30%;
   left: 70%;
-  height: 65%;
+  height: 45%;
   position: absolute;
   padding: 2%;
   padding-top: 40px;
@@ -50,3 +70,10 @@ li{
   background-color: #cccccc ;
   border-radius: 5px;
 }
+
+.tabs-left { margin-top: 6rem; }
+
+.nav-tabs {
+  float: left;
+  border-bottom: 0;
+}S

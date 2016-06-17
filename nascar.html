@@ -25,10 +25,11 @@
       <li ><a href="#"><img src="images/mlb.png" alt="" />MLB</a></li>
       <li ><a href="soccer.html"><img src="images/soccer.png" alt="" />SOCCER</a></li>
     </ul>
+
     <div ng-controller="NASCARController">
       <div id="map" >
       </div>
-      <div id = "ticketBox" ng-show="ticketResults.length>0">
+      <div id ="ticketBox" style="background-image: url(images/nascarback.jpg);" ng-show="ticketResults.length>0">
         <div ng-repeat = "ticketResult in ticketResults">
           {{ticketResult.name}}<br>
           Venue: {{ticketResult._embedded.venues[0].name}}<br>
