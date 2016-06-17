@@ -66,7 +66,7 @@ app.factory('nflCall', function($http) {
     getNflSchedule: function(callback) {
       $http({
         method: 'GET',
-        url: 'JSON/nflschedule.JSON'
+        url: 'json/nflschedule.json'
 
       }).success(function(nflScheduleData) {
           console.log(nflScheduleData);
@@ -81,7 +81,7 @@ app.factory('nflStadiumCall', function($http) {
     getNflStadium: function(callback) {
       $http({
         method: 'GET',
-        url: 'JSON/nflStadiumData.JSON'
+        url: 'json/nflstadiumdata.json'
 
       }).success(function(nflStadiumData) {
           console.log(nflStadiumData);

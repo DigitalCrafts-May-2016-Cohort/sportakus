@@ -76,7 +76,7 @@ app.factory('nascarCall', function($http) {
     getNascarSchedule: function(callback) {
       $http({
         method: 'GET',
-        url: 'JSON/nascar-sc-schedule.JSON'
+        url: 'json/nascar-sc-schedule.json'
 
       }).success(function(nascarScheduleData) {
           console.log(nascarScheduleData);
@@ -91,7 +91,7 @@ app.factory('nascarRaceCall', function($http) {
     getNascarTracks: function(callback) {
       $http({
         method: 'GET',
-        url: 'JSON/nascarTracks.JSON'
+        url: 'json/nascartracks.json'
 
       }).success(function(nascarTrackData) {
           console.log(nascarTrackData);

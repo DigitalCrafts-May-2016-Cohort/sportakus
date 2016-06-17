@@ -77,7 +77,7 @@ app.factory('mlsCall', function($http) {
     getMlsSchedule: function(callback) {
       $http({
         method: 'GET',
-        url: 'JSON/mlsschedule.JSON'
+        url: 'json/mlsschedule.json'
 
       }).success(function(mlsScheduleData) {
           console.log(mlsScheduleData);
@@ -92,7 +92,7 @@ app.factory('mlsStadiumCall', function($http) {
     getMlsStadium: function(callback) {
       $http({
         method: 'GET',
-        url: 'JSON/mlsStadiumData.JSON'
+        url: 'json/mlsstadiumdata.json'
 
       }).success(function(mlsStadiumData) {
           console.log(mlsStadiumData);

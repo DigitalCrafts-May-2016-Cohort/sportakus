@@ -6,7 +6,7 @@ A front-end project for DigitalCrafts utilizing everything we've learned so far.
 ![screenshot](images/scrumboard.jpg)
 
 # Overview of Project
-Our project will be a sort of sports aggragator that pulls: 
+Our project will be a sort of sports aggragator that pulls:
 * Map of where current matches are held
 
 * Options to buy tickets
@@ -23,7 +23,7 @@ Bootstrap, Angularjs
 Sports Radar API, Ticketmaster API, Google Maps API
 
 ##### Languages:
-HTML5, CSS3, JavaScript, 
+HTML5, CSS3, JavaScript,
 
 ##### Additional Tools:
 * XML to JSON converter: http://www.utilities-online.info/xmltojson/#.V17zT-YrJhE
@@ -48,7 +48,7 @@ Dave, Sandyha,and Matthew
 
 ![screenshot](images/screenshot3.png)
 
-Final 
+Final
 
 ![screenshot](images/screenshot4.png)
 
