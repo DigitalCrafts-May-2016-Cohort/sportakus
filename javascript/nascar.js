@@ -18,13 +18,21 @@ app.factory('googleMap', function(ticketCall) {
     var trackId = nascarTrackResult.id;
 
     var raceObjectArray = seriesByVenueDictionary[trackId];
-    var series = raceObjectArray[0];
-    seriesDate = series.start_date;
-    seriesName = series.name;
-    venueName = series.track.name;
-    cityName = series.track.city;
-    var contentString ='<h6>' + seriesName + "<br>" + seriesDate + '</h6>';
-    var headerString = '<h4>' + venueName + " , " + cityName + '</h3>';
+    var contentString;
+    var headerString;
+    if (raceObjectArray) {
+      var series = raceObjectArray[0];
+      seriesDate = series.start_date;
+      seriesName = series.name;
+      venueName = series.track.name;
+      cityName = series.track.city;
+      contentString ='<h6>' + seriesName + "<br>" + seriesDate + '</h6>';
+      headerString = '<h4>' + venueName + " , " + cityName + '</h3>';
+    } else {
+      contentString ='<h6> Come back next year! </h6>';
+      headerString= '<h6> No Races! </h6>';
+    }
+
     // var newRacesData = seriesData.join('');
     var marker = markerDictionary[nascarTrackResult.id];
     infoWindow.setContent(headerString + contentString);
@@ -141,7 +149,7 @@ app.factory('ticketCall', function($http) {
         params: {
           apikey: 'E8VNq1LttN0VP5ql6bYc28kSUXfNpFjG',
           Keyword: "nascar",
-          keyword: venueName
+          keyword: venueName,
 
         }
       }).success(function(ticketData) {
