@@ -1,0 +1,825 @@
+{
+  "series": {
+    "id": "3e32047e-4ff3-4e35-a607-1546a2c32214",
+    "alias": "CUP",
+    "name": "NASCAR Sprint Cup"
+  },
+  "season": {
+    "id": "14ef42df-dbfc-4abb-b808-1e4646bf8bd9",
+    "year": 2016
+  },
+  "events": [
+    {
+      "id": "460cc98d-64a4-474e-a684-0a8abfc3c57a",
+      "name": "NASCAR Sprint Cup Series at Sonoma",
+      "start_date": "2016-06-26",
+      "track": {
+        "name": "Sonoma Raceway",
+        "market": "Sonoma",
+        "completed": 1968,
+        "distance": 1.99,
+        "shape": "Road Course",
+        "banking": "11 Turns varying",
+        "frontstretch": 0,
+        "backstretch": 0,
+        "seating": 0,
+        "address": "29355 Arnold Drive",
+        "city": "Sonoma",
+        "state": "California",
+        "zip": "95476",
+        "country": "USA",
+        "id": "496fc152-b10f-4941-8439-f933eaae2e13"
+      },
+      "races": [
+        {
+          "id": "96b7eb28-0a0c-4300-8f95-ad56462701af",
+          "name": "Toyota/Save Mart 350",
+          "status": "scheduled",
+          "number": 16,
+          "distance": 218,
+          "laps": 110,
+          "scheduled": "2016-06-26T19:00:00+00:00",
+          "start_time": "2016-06-26T19:00:00+00:00",
+          "broadcast": {
+            "network": "Fox Sports 1",
+            "satellite": "SiriusXM",
+            "radio": "PRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "46641ee4-73bf-4549-b410-bf2f9c696484",
+      "name": "NASCAR Sprint Cup Series at Daytona",
+      "start_date": "2016-07-02",
+      "track": {
+        "name": "Daytona International Speedway",
+        "market": "Daytona Beach",
+        "completed": 1958,
+        "distance": 2.5,
+        "shape": "Tri-Oval",
+        "banking": "Turns: 31, Tri-Oval: 18, Backstretch: 3",
+        "frontstretch": 3800,
+        "backstretch": 3000,
+        "seating": 101000,
+        "address": "1801 West International Speedway Blvd.",
+        "city": "Daytona Beach",
+        "state": "Florida",
+        "zip": "32114-1243",
+        "country": "USA",
+        "id": "6ff97f68-2e9d-4fe6-8cd8-2969e1d3570b"
+      },
+      "races": [
+        {
+          "id": "757aa565-fb48-42e6-8929-5c64028dcb66",
+          "name": "Coke Zero 400 Powered by Coca-Cola",
+          "status": "scheduled",
+          "number": 17,
+          "distance": 400,
+          "laps": 160,
+          "scheduled": "2016-07-02T23:45:00+00:00",
+          "start_time": "2016-07-02T23:45:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bb2a7613-fed5-4cfc-a06d-432cbbda4a45",
+      "name": "NASCAR Sprint Cup Series at Kentucky",
+      "start_date": "2016-07-09",
+      "track": {
+        "name": "Kentucky Speedway",
+        "market": "Sparta",
+        "completed": 2000,
+        "distance": 1.5,
+        "shape": "Tri-Oval",
+        "banking": "Banking in Corners: 14 degrees; Banking on Straights: Front - 8 degrees; Back - 4 degrees",
+        "frontstretch": 1662,
+        "backstretch": 1600,
+        "seating": 107000,
+        "address": "4760 Sparta Pike",
+        "city": "Sparta",
+        "state": "Kentucky",
+        "zip": "41086",
+        "country": "USA",
+        "id": "8bde2b6c-236e-44c7-98ac-2fbcfb6ae13b"
+      },
+      "races": [
+        {
+          "id": "b4f7cc59-db1e-481a-a61e-666f8a85bffd",
+          "name": "Quaker State 400 Presented by Advance Auto Parts",
+          "status": "scheduled",
+          "number": 18,
+          "distance": 400,
+          "laps": 267,
+          "scheduled": "2016-07-09T23:30:00+00:00",
+          "start_time": "2016-07-09T23:30:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "PRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f002948b-c92e-487c-afed-c43538f38ea1",
+      "name": "NASCAR Sprint Cup Series at New Hampshire",
+      "start_date": "2016-07-17",
+      "track": {
+        "name": "New Hampshire Motor Speedway",
+        "market": "Loudon",
+        "completed": 1990,
+        "distance": 1.058,
+        "shape": "Oval",
+        "banking": "Turns: 2 & 7; Backstretch:1; Frontstretch:1",
+        "frontstretch": 1500,
+        "backstretch": 1500,
+        "seating": 95000,
+        "address": "1122 Rte. 106 North",
+        "city": "Loudon",
+        "state": "New Hampshire",
+        "zip": "03307",
+        "country": "USA",
+        "id": "cd705ff5-045b-4c96-a96e-74a98b5f95af"
+      },
+      "races": [
+        {
+          "id": "5ed9d27e-5e3b-43da-b94a-d57e15794e20",
+          "name": "New Hampshire 301",
+          "status": "scheduled",
+          "number": 19,
+          "distance": 318,
+          "laps": 301,
+          "scheduled": "2016-07-17T17:30:00+00:00",
+          "start_time": "2016-07-17T17:30:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "PRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2935f11d-45eb-477a-9dd8-66972b42688c",
+      "name": "NASCAR Sprint Cup Series at Indianapolis",
+      "start_date": "2016-07-24",
+      "track": {
+        "name": "Indianapolis Motor Speedway",
+        "market": "Indianapolis",
+        "completed": 1909,
+        "distance": 2.5,
+        "shape": "Oval",
+        "banking": "Turns:9;Backstretch:0;Frontstretch:0",
+        "frontstretch": 3330,
+        "backstretch": 3330,
+        "seating": 250000,
+        "address": "4790 West 16th Street",
+        "city": "Speedway",
+        "state": "Indiana",
+        "zip": "46222",
+        "country": "USA",
+        "id": "421c2846-3b70-4ed9-acdf-be3dbe4957b6"
+      },
+      "races": [
+        {
+          "id": "b17a573a-7a04-4bde-a680-cad21cda9994",
+          "name": "Crown Royal Presents the 'Your Hero's Name Here' 400",
+          "status": "scheduled",
+          "number": 20,
+          "distance": 400,
+          "laps": 160,
+          "scheduled": "2016-07-24T19:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "IMS"
+          }
+        }
+      ]
+    },
+    {
+      "id": "048ef197-dd76-46e3-b01f-67af44344c46",
+      "name": "NASCAR Sprint Cup Series at Pocono",
+      "start_date": "2016-07-31",
+      "track": {
+        "name": "Pocono Raceway",
+        "market": "Long Pond",
+        "completed": 1968,
+        "distance": 2.5,
+        "shape": "Tri-Oval",
+        "banking": "Turn1:14;Turn2:8;Turn3:6;Backstretch:0;Frontstretch:0;ShortStretch:0",
+        "frontstretch": 3740,
+        "backstretch": 3055,
+        "seating": 0,
+        "address": "Long Pond Road",
+        "city": "Long Pond",
+        "state": "Pennsylvania",
+        "zip": "18334",
+        "country": "USA",
+        "id": "7267d5f0-463e-4a81-a7fe-23b71dd2182e"
+      },
+      "races": [
+        {
+          "id": "42639ddc-6caa-4325-9a42-ec5f0fe3f993",
+          "name": "Pennsylvania 400",
+          "status": "scheduled",
+          "number": 21,
+          "distance": 400,
+          "laps": 160,
+          "scheduled": "2016-07-31T17:30:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f6c4845d-ebe3-4511-81cb-dadb77d7d77f",
+      "name": "NASCAR Sprint Cup Series at Watkins Glen",
+      "start_date": "2016-08-07",
+      "track": {
+        "name": "Watkins Glen International",
+        "market": "Watkins Glen",
+        "completed": 1956,
+        "distance": 2.45,
+        "shape": "Road Course",
+        "banking": "Turns:6-10",
+        "frontstretch": 0,
+        "backstretch": 0,
+        "seating": 0,
+        "address": "2790 County Route 16",
+        "city": "Watkins Glen",
+        "state": "New York",
+        "zip": "14891",
+        "country": "USA",
+        "id": "d52314d0-06c3-4619-a8d0-1d97a21d8f22"
+      },
+      "races": [
+        {
+          "id": "382b1997-b1b2-4641-b9ad-d74a2516b20c",
+          "name": "Cheez-It 355 at The Glen",
+          "status": "scheduled",
+          "number": 22,
+          "distance": 220,
+          "laps": 90,
+          "scheduled": "2016-08-07T18:30:00+00:00",
+          "broadcast": {
+            "network": "USA",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f0677015-0bd3-426e-9b92-ff95912b1454",
+      "name": "NASCAR Sprint Cup Series at Bristol",
+      "start_date": "2016-08-20",
+      "track": {
+        "name": "Bristol Motor Speedway",
+        "market": "Bristol",
+        "completed": 1961,
+        "distance": 0.533,
+        "shape": "Oval",
+        "banking": "Turns:36;Backstretch:4-8;Frontstretch:5-9",
+        "frontstretch": 650,
+        "backstretch": 650,
+        "seating": 160000,
+        "address": "151 Speedway Blvd.",
+        "city": "Bristol",
+        "state": "Tennessee",
+        "zip": "37620",
+        "country": "USA",
+        "id": "18fcc226-bc18-4b66-80fb-4867b654e588"
+      },
+      "races": [
+        {
+          "id": "c81fc53b-7a73-47f6-8cf1-3c7313d03995",
+          "name": "Bass Pro Shops NRA Night Race",
+          "status": "scheduled",
+          "number": 23,
+          "distance": 266,
+          "laps": 500,
+          "scheduled": "2016-08-21T00:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "PRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "3b62b990-21f0-4fa7-8490-3e022a6a8eae",
+      "name": "NASCAR Sprint Cup Series at Michigan",
+      "start_date": "2016-08-28",
+      "track": {
+        "name": "Michigan International Speedway",
+        "market": "Brooklyn",
+        "completed": 1968,
+        "distance": 2,
+        "shape": "D-Shaped Oval",
+        "banking": "Turns:18;Backstretch:5;Frontstretch:12",
+        "frontstretch": 3600,
+        "backstretch": 2242,
+        "seating": 119500,
+        "address": "12626 U.S. 12",
+        "city": "Brooklyn",
+        "state": "Michigan",
+        "zip": "49230",
+        "country": "USA",
+        "id": "83865dba-7a30-441a-95e0-51219f7e7c56"
+      },
+      "races": [
+        {
+          "id": "f84a4ea9-f3c6-41f9-a44a-116c99d9a338",
+          "name": "Pure Michigan 400",
+          "status": "scheduled",
+          "number": 24,
+          "distance": 400,
+          "laps": 200,
+          "scheduled": "2016-08-28T18:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a9eb2656-f86c-4d4c-862a-098ea21dafb8",
+      "name": "NASCAR Sprint Cup Series at Darlington",
+      "start_date": "2016-09-04",
+      "track": {
+        "name": "Darlington Raceway",
+        "market": "Darlington",
+        "completed": 1950,
+        "distance": 1.366,
+        "shape": "Oval",
+        "banking": "Turns:23-25;Backstretch:6;Frontstretch:6",
+        "frontstretch": 1229,
+        "backstretch": 1229,
+        "seating": 63000,
+        "address": "1301 Harry Byrd Hwy",
+        "city": "Darlington",
+        "state": "South Carolina",
+        "zip": "29532",
+        "country": "USA",
+        "id": "aab526c7-4279-4693-9cb1-90e3c7b974fc"
+      },
+      "races": [
+        {
+          "id": "519b59da-3e27-44d3-bdb8-edbf9058c744",
+          "name": "Bojangles' Southern 500",
+          "status": "scheduled",
+          "number": 25,
+          "distance": 501,
+          "laps": 367,
+          "scheduled": "2016-09-04T22:00:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "9d67340f-0386-4736-bee0-fb305004e205",
+      "name": "NASCAR Sprint Cup Series at Richmond",
+      "start_date": "2016-09-10",
+      "track": {
+        "name": "Richmond International Raceway",
+        "market": "Richmond",
+        "completed": 1946,
+        "distance": 0.75,
+        "shape": "Tri-Oval",
+        "banking": "Turns:14;Backstretch:8;Fronstretch:2",
+        "frontstretch": 1290,
+        "backstretch": 860,
+        "seating": 94063,
+        "address": "600 East Laburnum Avenue",
+        "city": "Richmond",
+        "state": "Virginia",
+        "zip": "23222",
+        "country": "USA",
+        "id": "734227a1-a32f-40bf-b174-0c0e7aa0d696"
+      },
+      "races": [
+        {
+          "id": "391343d0-a77b-49c7-b6a7-154c0afb4a07",
+          "name": "Federated Auto Parts 400",
+          "status": "scheduled",
+          "number": 26,
+          "distance": 300,
+          "laps": 400,
+          "scheduled": "2016-09-10T23:30:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "423852b5-6411-4db5-973b-06acf15446f0",
+      "name": "NASCAR Sprint Cup Series at Chicago",
+      "start_date": "2016-09-18",
+      "track": {
+        "name": "Chicagoland Speedway",
+        "market": "Joliet",
+        "completed": 2001,
+        "distance": 1.5,
+        "shape": "D-Shaped Oval",
+        "banking": "Turns:18;Backstretch:5;Tri-Oval:11",
+        "frontstretch": 2400,
+        "backstretch": 1700,
+        "seating": 75000,
+        "address": "500 Speedway Blvd",
+        "city": "Joliet",
+        "state": "Illinois",
+        "zip": "60433",
+        "country": "USA",
+        "id": "0e9dda94-eb5b-49e6-a09f-0869b82ce30b"
+      },
+      "races": [
+        {
+          "id": "8e2deb49-5d0b-4754-99c7-ffa073845c07",
+          "name": "Teenage Mutant Ninja Turtles 400",
+          "status": "scheduled",
+          "number": 27,
+          "distance": 400,
+          "laps": 267,
+          "chase_race": true,
+          "scheduled": "2016-09-18T18:30:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4415df65-94bb-4bdf-a786-171483e31ee1",
+      "name": "NASCAR Sprint Cup Series at New Hampshire",
+      "start_date": "2016-09-25",
+      "track": {
+        "name": "New Hampshire Motor Speedway",
+        "market": "Loudon",
+        "completed": 1990,
+        "distance": 1.058,
+        "shape": "Oval",
+        "banking": "Turns: 2 & 7; Backstretch:1; Frontstretch:1",
+        "frontstretch": 1500,
+        "backstretch": 1500,
+        "seating": 95000,
+        "address": "1122 Rte. 106 North",
+        "city": "Loudon",
+        "state": "New Hampshire",
+        "zip": "03307",
+        "country": "USA",
+        "id": "cd705ff5-045b-4c96-a96e-74a98b5f95af"
+      },
+      "races": [
+        {
+          "id": "bf875750-84b3-484d-8b33-50d50464b394",
+          "name": "New England 300",
+          "status": "scheduled",
+          "number": 28,
+          "distance": 317,
+          "laps": 300,
+          "chase_race": true,
+          "scheduled": "2016-09-25T18:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "PRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7c93f09f-a5f4-4aac-9558-e2997fe594a9",
+      "name": "NASCAR Sprint Cup Series at Dover",
+      "start_date": "2016-10-02",
+      "track": {
+        "name": "Dover International Speedway",
+        "market": "Dover",
+        "completed": 1969,
+        "distance": 1,
+        "shape": "Oval",
+        "banking": "Turns:24:Backstretch:9;Frontstretch:9",
+        "frontstretch": 1076,
+        "backstretch": 1076,
+        "seating": 113000,
+        "address": "1131 North DuPont Highway",
+        "city": "Dover",
+        "state": "Delaware",
+        "zip": "19901",
+        "country": "USA",
+        "id": "e757d061-86db-4b28-9b19-9a3536a6994e"
+      },
+      "races": [
+        {
+          "id": "13de0936-f935-411c-ba38-c80e948c6436",
+          "name": "AAA 400",
+          "status": "scheduled",
+          "number": 29,
+          "distance": 400,
+          "laps": 400,
+          "chase_race": true,
+          "scheduled": "2016-10-02T18:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ea1e15ee-3705-4958-a09e-a72633ffba67",
+      "name": "NASCAR Sprint Cup Series at Charlotte",
+      "start_date": "2016-10-08",
+      "track": {
+        "name": "Charlotte Motor Speedway",
+        "market": "Charlotte",
+        "completed": 1960,
+        "distance": 1.5,
+        "shape": "Quad-Oval",
+        "banking": "Turns:24;Backstretch:5;Fronstretch:5",
+        "frontstretch": 1980,
+        "backstretch": 1500,
+        "seating": 135000,
+        "address": "5555 Concord Parkway South",
+        "city": "Concord",
+        "state": "North Carolina",
+        "zip": "28027",
+        "country": "USA",
+        "id": "c0ae0e00-9899-4d01-869b-56a4763cc54d"
+      },
+      "races": [
+        {
+          "id": "c2f2b237-2943-48ab-87cc-b91078b20ddf",
+          "name": "Bank of America 500",
+          "status": "scheduled",
+          "number": 30,
+          "distance": 501,
+          "laps": 334,
+          "chase_race": true,
+          "scheduled": "2016-10-08T23:00:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "PRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dbdefa3c-853d-4f5e-bc68-e8735e082142",
+      "name": "NASCAR Sprint Cup Series at Kansas",
+      "start_date": "2016-10-16",
+      "track": {
+        "name": "Kansas Speedway",
+        "market": "Kansas City",
+        "completed": 2001,
+        "distance": 1.5,
+        "shape": "D-Shaped Oval",
+        "banking": "Turns:15;Backstretch:5:Frontstretch:10.4",
+        "frontstretch": 2685,
+        "backstretch": 2207,
+        "seating": 81687,
+        "address": "400 Speedway Blvd.",
+        "city": "Kansas City",
+        "state": "Kansas",
+        "zip": "66111",
+        "country": "USA",
+        "id": "42d3569d-cc77-4072-88d5-f63046eddf39"
+      },
+      "races": [
+        {
+          "id": "efc5f0fb-09db-4554-92d1-99c5c58d61fb",
+          "name": "Hollywood Casino 400",
+          "status": "scheduled",
+          "number": 31,
+          "distance": 400,
+          "laps": 267,
+          "chase_race": true,
+          "scheduled": "2016-10-16T18:15:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a343f81e-1c0e-4d46-899c-ee8834a69d76",
+      "name": "NASCAR Sprint Cup Series at Talladega",
+      "start_date": "2016-10-23",
+      "track": {
+        "name": "Talladega Superspeedway",
+        "market": "Talladega",
+        "completed": 1969,
+        "distance": 2.66,
+        "shape": "Tri-Oval",
+        "banking": "Turns:33;Backstretch:2;Frontstretch:16.5",
+        "frontstretch": 4300,
+        "backstretch": 4000,
+        "seating": 131866,
+        "address": "3366 Speedway Blvd.",
+        "city": "Talladega",
+        "state": "Alabama",
+        "zip": "35160",
+        "country": "USA",
+        "id": "83e96e25-19f7-4538-809c-24e888cc3e41"
+      },
+      "races": [
+        {
+          "id": "30ed9dad-449d-4fc8-a1d5-28b69c8a1f01",
+          "name": "Alabama 500",
+          "status": "scheduled",
+          "number": 32,
+          "distance": 500,
+          "laps": 188,
+          "chase_race": true,
+          "scheduled": "2016-10-23T18:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4e44fc2-6245-4db1-84bb-4fcae3f65a14",
+      "name": "NASCAR Sprint Cup Series at Martinsville",
+      "start_date": "2016-10-30",
+      "track": {
+        "name": "Martinsville Speedway",
+        "market": "Martinsville",
+        "completed": 1947,
+        "distance": 0.526,
+        "shape": "Oval",
+        "banking": "Turns:12;Backstretch:0;Frontstretch:0",
+        "frontstretch": 800,
+        "backstretch": 800,
+        "seating": 65000,
+        "address": "340 Speedway Road",
+        "city": "Martinsville",
+        "state": "Virginia",
+        "zip": "24112",
+        "country": "USA",
+        "id": "409dd8fb-2ab9-4181-9f0f-99545083b689"
+      },
+      "races": [
+        {
+          "id": "e2bacd95-cf12-48c3-bdd2-259529ad5fec",
+          "name": "Goody's Fast Relief 500",
+          "status": "scheduled",
+          "number": 33,
+          "distance": 263,
+          "laps": 500,
+          "chase_race": true,
+          "scheduled": "2016-10-30T17:00:00+00:00",
+          "broadcast": {
+            "network": "NBCSN",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "219b7609-a1f6-4c0b-a1ee-052c21231b26",
+      "name": "NASCAR Sprint Cup Series at Texas",
+      "start_date": "2016-11-06",
+      "track": {
+        "name": "Texas Motor Speedway",
+        "market": "Fort Worth",
+        "completed": 1995,
+        "distance": 1.5,
+        "shape": "Quad-Oval",
+        "banking": "Turns:24;Backstretch:5;Tri-Oval:5",
+        "frontstretch": 2250,
+        "backstretch": 1330,
+        "seating": 122377,
+        "address": "3601 Highway 114",
+        "city": "Fort Worth",
+        "state": "Texas",
+        "zip": "76177",
+        "country": "USA",
+        "id": "6c2be094-7477-4d92-b7ff-10dfda27e315"
+      },
+      "races": [
+        {
+          "id": "1b4531a8-a9f6-4e6b-a37a-a8f8c21c603a",
+          "name": "AAA Texas 500",
+          "status": "scheduled",
+          "number": 34,
+          "distance": 500,
+          "laps": 334,
+          "chase_race": true,
+          "scheduled": "2016-11-06T19:00:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "092a8780-a4b8-4354-bb32-8180a76ebb9e",
+      "name": "NASCAR Sprint Cup Series at Phoenix",
+      "start_date": "2016-11-13",
+      "track": {
+        "name": "Phoenix International Raceway",
+        "market": "Phoenix",
+        "completed": 1964,
+        "distance": 1,
+        "shape": "Tri-Oval",
+        "banking": "Turns1-2:11;Turns3-4:9;Backstretch:9;Frontstreth:3",
+        "frontstretch": 1179,
+        "backstretch": 1551,
+        "seating": 56000,
+        "address": "7602 S 115th Avenue",
+        "city": "Avondale",
+        "state": "Arizona",
+        "zip": "85323",
+        "country": "USA",
+        "id": "5dc82850-ba60-4bd6-8ce3-4e07e8094a83"
+      },
+      "races": [
+        {
+          "id": "f884a684-66b6-4f58-945e-202339fc3b95",
+          "name": "Can-Am 500",
+          "status": "scheduled",
+          "number": 35,
+          "distance": 312,
+          "laps": 312,
+          "chase_race": true,
+          "scheduled": "2016-11-13T19:30:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1aa3a39d-5515-490b-adf2-f10079c5bec9",
+      "name": "NASCAR Sprint Cup Series at Homestead-Miami",
+      "start_date": "2016-11-20",
+      "track": {
+        "name": "Homestead-Miami Speedway",
+        "market": "Homestead",
+        "completed": 1999,
+        "distance": 1.5,
+        "shape": "Oval",
+        "banking": "Turns:18-20;Backstretch:4;Frontstretch:4",
+        "frontstretch": 1760,
+        "backstretch": 1760,
+        "seating": 65000,
+        "address": "One Speedway Blvd.",
+        "city": "Homestead",
+        "state": "Florida",
+        "zip": "33035-1500",
+        "country": "USA",
+        "id": "9e171ce2-7b98-4bed-b870-a01d7e393cda"
+      },
+      "races": [
+        {
+          "id": "cf82b04d-cc9c-4621-aa9b-cbc6ee269de7",
+          "name": "Ford EcoBoost 400",
+          "status": "scheduled",
+          "number": 36,
+          "distance": 400,
+          "laps": 267,
+          "chase_race": true,
+          "scheduled": "2016-11-20T19:30:00+00:00",
+          "broadcast": {
+            "network": "NBC",
+            "satellite": "SiriusXM",
+            "radio": "MRN"
+          }
+        }
+      ]
+    }
+  ]
+}
