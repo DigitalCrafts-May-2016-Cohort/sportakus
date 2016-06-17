@@ -1,8 +1,9 @@
 # Sportakus
 A front-end project for DigitalCrafts utilizing everything we've learned so far. We had one week to finish our Sports Matches and Tickets application. Our learning objectives include:
-* Working together as a team, practice effective communications via explicit documentation through Github
-* Project management methodologies and practices: daily scrum meetings and scrum board
 
+* Working together as a team, practice effective communications via explicit documentation through Github
+* Scrum agile methodology implemented via daily scrum meetings and scrum board to track our progress
+![screenshot](images/scrumboard.jpg)
 
 # Overview of Project
 Our project will be a sort of sports aggragator that pulls: 
@@ -15,19 +16,21 @@ Our project will be a sort of sports aggragator that pulls:
 
 
 # Technologies, Frameworks, and Programming Languages used
-* Bootstrap
+##### Frameworks
+Bootstrap, Angularjs
 
-* (stats) Sports Radar API
+##### API's
+Sports Radar API, Ticketmaster API, Google Maps API
 
-* (tickets) Ticketmaster/StubHub API
+##### Languages:
+HTML5, CSS3, JavaScript, 
 
-* (map) Google Maps API
-
+##### Additional Tools:
 * XML to JSON converter: http://www.utilities-online.info/xmltojson/#.V17zT-YrJhE
 
 
-# Contributors
-Dave, Sandyha, Matthew
+# Team Sportan
+Dave, Sandyha,and Matthew
 
 # Name of each team member and his/her individual contributions to the project
 * Matthew: worked on core functionalities of the app (building local JSON files to store data), helped the team with problem-sovling javascript issues.
@@ -39,13 +42,20 @@ Dave, Sandyha, Matthew
 
 ![screenshot](images/screenshot.png)
 
+#Phases of our Project
+
+![screenshot](images/screenshot2.png)
+
+![screenshot](images/screenshot3.png)
 
 3 contributions your team would like for others to add to the project
 * Dynamic data pulls from assorted API's (this can be accomplished on paid accounts for API services)
 * Add more sports to app
 * Add login functionality to remember user ticket/sports preferences
+* Add news feed carousel at the bottom, can be accomplished using Bing API
 
 
 
 URL to live project
 
+http://sportakus.surge.sh/index.html
