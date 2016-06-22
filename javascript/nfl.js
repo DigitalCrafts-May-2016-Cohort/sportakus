@@ -1,8 +1,20 @@
 var app = angular.module('sports-app', []);
 var markerDictionary = {};
-var cityName;
+// Try to break up this controller function into small pieces
+// 20 lines per function.
+
+function getHomeTeam(stadium) {
+  var games = gamesByVenueDictionary[stadium.id];
+  var firstGame = games[0];
+  return {
+    name: firstGame.home.name,
+    venue: firstGame.venue.name,
+    cityName: firstGame.venue.city
+  };
+}
+
 app.factory('googleMap', function(ticketCall) {
-  var homeTeam = "";
+
   var sidebarData;
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, {
@@ -11,18 +23,12 @@ app.factory('googleMap', function(ticketCall) {
   });
   var infoWindow = new google.maps.InfoWindow();
   function openInfoWindow(nflStadiumResult) {
-    var venueName = '';
-    var venueId = nflStadiumResult.id;
-    var gameObjectArray = gamesByVenueDictionary[venueId];
+    var homeTeam = getHomeTeam(nflStadiumResult);
+    var gameObjectArray = gamesByVenueDictionary[nflStadiumResult.id];
     var gamesData = gameObjectArray.map(function(games){
-      var awayTeam = games.away.name;
-      homeTeam = games.home.name;
-      venueName = games.venue.name;
-      cityName = games.venue.city;
-      var contentString ='<h6>' + awayTeam + ' vs ' + homeTeam + '</h6>';
-      return contentString;
+      return '<h6>' + games.away.name + ' vs ' + homeTeam.name + '</h6>';
     });
-    var headerString = '<h4>' + venueName + '</h3>';
+    var headerString = '<h4>' + homeTeam.venue + '</h3>';
     var newGamesData = gamesData.join('');
     var marker = markerDictionary[nflStadiumResult.id];
     infoWindow.setContent(headerString + newGamesData);
@@ -30,7 +36,10 @@ app.factory('googleMap', function(ticketCall) {
   }
   function makeMarkers(gamesByVenueDictionary, nflStadiumResults, sidebarDataCallback) {
     var nflStadiumData = nflStadiumResults.map(function(nflStadiumResult) {
-      var thePosition = {lat: nflStadiumResult.lat, lng: nflStadiumResult.lng};
+      var thePosition = {
+        lat: nflStadiumResult.lat,
+        lng: nflStadiumResult.lng
+      };
       var marker = new google.maps.Marker({
         position: thePosition,
         map: map,
@@ -46,11 +55,11 @@ app.factory('googleMap', function(ticketCall) {
       markerDictionary[nflStadiumResult.id] = marker;
       marker.addListener('click', function(){
         openInfoWindow(nflStadiumResult);
+        var homeTeam = getHomeTeam(nflStadiumResult);
         ticketCall.getTicketInfo(homeTeam, function(ticketData){
           sidebarDataCallback(ticketData);
-
         });
-          return marker;
+        return marker;
       });
     });
   }
@@ -69,42 +78,34 @@ app.factory('nflCall', function($http) {
         url: 'json/nflschedule.json'
 
       }).success(function(nflScheduleData) {
-          console.log(nflScheduleData);
-          callback(nflScheduleData);
-        });
-    }
-  };
-});
-// NFL Stadium AJAX service
-app.factory('nflStadiumCall', function($http) {
-  return {
+        console.log(nflScheduleData);
+        callback(nflScheduleData);
+      });
+    },
     getNflStadium: function(callback) {
       $http({
         method: 'GET',
         url: 'json/nflstadiumdata.json'
 
       }).success(function(nflStadiumData) {
-          console.log(nflStadiumData);
-          callback(nflStadiumData);
-        });
+        console.log(nflStadiumData);
+        callback(nflStadiumData);
+      });
     }
   };
 });
+
 // NFL controller
-app.controller('NflController', function($http, $scope, nflCall, nflStadiumCall, googleMap) {
+app.controller('NflController', function($http, $scope, nflCall, googleMap) {
   nflCall.getNflSchedule(function(nflScheduleData) {
     var nflScheduleResults = nflScheduleData.weeks;
-    $scope.results = nflScheduleResults;
-    nflStadiumCall.getNflStadium(function(nflStadiumData){
+    nflCall.getNflStadium(function(nflStadiumData){
       var nflStadiumResults = nflStadiumData.nflStadium;
       googleMap.makeMarkers(nflScheduleResults, nflStadiumResults, function(ticketData){
         $scope.ticketResults = ticketData._embedded.events;
       });
       createGameDictionary(nflScheduleResults);
     });
-
-
-
   });
 });
 
@@ -118,7 +119,6 @@ function createGameDictionary (nflScheduleResults){
       if (!(venueId in gamesByVenueDictionary)) {
         gamesByVenueDictionary[venueId] = [];
       }
-
       var gamesArray = gamesByVenueDictionary[venueId];
       gamesArray.push(data.games[j]);
     }
@@ -134,9 +134,9 @@ app.factory('ticketCall', function($http) {
         url:'https://app.ticketmaster.com/discovery/v2/events.json?',
         params: {
           apikey: 'E8VNq1LttN0VP5ql6bYc28kSUXfNpFjG',
-          keyword: homeTeam,
+          keyword: homeTeam.name,
           classificationName: "NFL",
-          city: cityName
+          city: homeTeam.cityName
         }
       }).success(function(ticketData) {
           console.log(ticketData);
