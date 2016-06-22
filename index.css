@@ -106,3 +106,12 @@ li{
     -o-transition: all ease 0.3s;
     -ms-transition: all ease 0.3s;
 }
+
+.social {
+  position: fixed;
+  left: 0;
+}
+
+.sport {
+  text-align: center;
+}
